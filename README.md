@@ -2,50 +2,123 @@
 {
   "depends_on": [],
   "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "first_used": "2025-05-02",
+  "keywords": ["numbers", "binary", "decimal", "hexadecimal"]
 }
 --->
 
-# Learning Through Exercises
+# Number Systems: Binary, Decimal, and Hexadecimal
 
-## Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+> In this exercise you will learn how to represent natural numbers in binary, decimal, and hexadecimal systems. Furthermore we will explore how to convert numbers between these systems, and how basic operations like addition and multiplication are performed in each base.
+
+### Introduction
+
+The way humans write numbers has evolved through centuries. The decimal system (base-10) is the most familiar, using ten digits (0 to 9), and traces its roots to ancient civilizations like the Egyptians and the Hindus, likely influenced by counting with ten fingers. In contrast, computers use the binary system (base-2), employing only two digits, 0 and 1. This binary representation aligns perfectly with the digital electronic world, where two voltage levels (e.g., on/off) encode information.
+
+Another useful system in computing is hexadecimal (base-16), which employs sixteen symbols: 0–9 and A–F. It serves as a compact and human-friendly representation of binary-coded data, grouping binary digits into clusters of four (e.g., 1111₂ = F₁₆).
+
+All number systems rely on the same underlying concept: **positional value**. A number is expressed as the sum of its digits multiplied by the base raised to powers corresponding to their positions. For instance:
+
+```
+Decimal:     345 = 3×10^2 + 4×10^1 + 5×10^0
+Binary:     1011 = 1×2^3 + 0×2^2 + 1×2^1 + 1×2^0 = 11 in decimal
+Hex:         1F = 1×16^1 + 15×16^0 = 31 in decimal
+```
+
+Understanding these systems and switching between them is crucial in computer science, digital electronics, and cybersecurity.
 
 ### Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
 
-## Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
+* [Number Systems – Khan Academy](https://www.khanacademy.org/computing/computer-science/cryptography)
+* [Binary and Hexadecimal Number Systems](https://doi.org/10.1109/9780470544334.ch1)
+* [Computerphile: Hexadecimal](https://www.youtube.com/watch?v=obXH0GxNAMk)
+* [Understanding Binary - Stanford CS](https://cs.stanford.edu/people/eroberts/courses/soco/projects/2000-01/digital-watch/binary.html)
 
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+### Tasks
 
-## Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+#### Task 1: Converting Between Number Systems
 
-## Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
+In this task, you will practice converting natural numbers between binary, decimal, and hexadecimal forms. Each conversion requires understanding the place value system used in each base.
 
+1. **Convert 45 in decimal to binary and hexadecimal**:
+
+   * **To Binary**: Repeatedly divide the number by 2, noting the remainders. Reverse the sequence of remainders to get the binary number.
+
+     * 45 ÷ 2 = 22 remainder 1
+     * 22 ÷ 2 = 11 remainder 0
+     * 11 ÷ 2 = 5 remainder 1
+     * 5 ÷ 2 = 2 remainder 1
+     * 2 ÷ 2 = 1 remainder 0
+     * 1 ÷ 2 = 0 remainder 1 → Read upwards: 101101₂
+   * **To Hexadecimal**: Divide the decimal number by 16.
+
+     * 45 ÷ 16 = 2 remainder 13 → 13 corresponds to D → Hex = 2D₁₆
+
+2. **Convert 11011 in binary to decimal and hexadecimal**:
+
+   * **To Decimal**: Use positional values from right to left.
+
+     * 1×2⁴ + 1×2³ + 0×2² + 1×2¹ + 1×2⁰ = 16 + 8 + 0 + 2 + 1 = 27₁₀
+   * **To Hexadecimal**: Group binary digits into 4s from the right: 0001 1011 → 1B₁₆
+
+3. **Convert 7F in hexadecimal to binary and decimal**:
+
+   * **To Binary**: 7 = 0111, F = 1111 → Binary = 01111111₂
+   * **To Decimal**: 7×16 + 15 = 112 + 15 = 127₁₀
+
+#### Task 2: Addition Across Number Systems
+
+In this task, we will perform additions in binary, hexadecimal, and decimal systems, showing intermediate steps and equivalent values.
+
+1. **Add 1011₂ and 1101₂**:
+
+   * Convert to decimal: 1011 = 11, 1101 = 13
+   * Add: 11 + 13 = 24
+   * Convert the sum back to binary: 24 ÷ 2 → 11000₂
+
+2. **Add 3A₁₆ and 29₁₆**:
+
+   * Convert to decimal: 3A = 58, 29 = 41
+   * Add: 58 + 41 = 99
+   * Convert to hexadecimal: 99 ÷ 16 = 6 remainder 3 → 63₁₆
+
+3. **Add 58₁₀ and 74₁₀**:
+
+   * Perform direct addition: 58 + 74 = 132
+   * Convert to binary: 10000100₂
+   * Convert to hexadecimal: 132 ÷ 16 = 8 remainder 4 → 84₁₆
+
+#### Task 3: Multiplication Across Number Systems
+
+In this task, we will multiply numbers in each system and convert the result into all three formats.
+
+1. **Multiply 101₂ and 11₂**:
+
+   * Convert to decimal: 101 = 5, 11 = 3
+   * Multiply: 5 × 3 = 15
+   * Convert result to binary: 1111₂
+
+2. **Multiply A₁₆ and 4₁₆**:
+
+   * Convert to decimal: A = 10, 4 = 4
+   * Multiply: 10 × 4 = 40
+   * Convert to hexadecimal: 28₁₆
+
+3. **Multiply 13₁₀ and 6₁₀**:
+
+   * Multiply: 13 × 6 = 78
+   * Convert to binary: 1001110₂
+   * Convert to hexadecimal: 78 ÷ 16 = 4 remainder 14 → 4E₁₆
+
+### Questions
+
+1. What is the base of the decimal, binary, and hexadecimal systems?
+2. What are the digits available in hexadecimal?
+3. How is the number 255 represented in binary and hexadecimal?
+4. Convert the binary number 100101 to decimal.
+5. Convert the hexadecimal number B3 to decimal.
+6. How do you add two binary numbers? Show an example.
+
+### Advice
+
+Understanding number systems takes time and practice, especially if you're new to binary or hexadecimal representations. Work through conversions methodically and double-check your intermediate results, particularly powers of two or sixteen. Use your calculator only to verify results after doing them by hand. Visual aids such as grouping binary digits when converting to hexadecimal can make the process easier. If this sheet was challenging, consider reviewing the [Number Systems Basics](#) sheet before proceeding to advanced topics like floating-point representation or base arithmetic.
