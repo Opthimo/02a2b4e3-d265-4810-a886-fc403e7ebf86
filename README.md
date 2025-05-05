@@ -113,11 +113,32 @@ In this task, we will multiply numbers in each system and convert the result int
 ### Questions
 
 1. What is the base of the decimal, binary, and hexadecimal systems?
+  10, 2, 16
+
 2. What are the digits available in hexadecimal?
+  A to F
+
 3. How is the number 255 represented in binary and hexadecimal?
+  1111 1111
+     F    F
+
 4. Convert the binary number 100101 to decimal.
+  37
+
 5. Convert the hexadecimal number B3 to decimal.
+   0111  0011
+    64+32+16+2+1
+dec: 115
+
 6. How do you add two binary numbers? Show an example.
+    1010
+   +0011
+     1
+    1101
+    
+    add the two digits, if the sum is 2, add 1 to the next digts on the left and write 0 below the thwo digits.
+        
+
 
 ### Advice
 
